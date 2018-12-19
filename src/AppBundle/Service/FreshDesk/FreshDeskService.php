@@ -74,7 +74,7 @@ class FreshDeskService
             $contentPermissions = $this->contentPermissionRepo->findBy(['user' => $user->getId()]);
 
             if (count($contentPermissions) > 0) {
-                $description .= "<table><thead><tr><th>Content Id</th><th>Content Type</th><th>Permission</th><th>Granted At (UTC)</th><th>Expires At (UTC)</th><th>Granted Via</th><th>Granted Via Type</th></tr></thead><tbody";
+                $description .= "<table><thead><tr><th>Content Id</th><th>Content Type</th><th>Permission</th><th>Granted At (UTC)</th><th>Expires At (UTC)</th><th>Granted Via</th><th>Granted Via Type</th></tr></thead><tbody>";
 
                 foreach ($contentPermissions as $contentPermission) {
                     /** @var ContentPermission $contentPermission */
